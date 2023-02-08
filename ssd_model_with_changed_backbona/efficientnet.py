@@ -297,6 +297,10 @@ class EfficientNet(BaseModule):
 
         self.layer_setting = model_scaling(self.layer_setting,
                                            self.arch_setting)
+        self.enc_conv_512 = nn.Sequential(nn.Conv2d(48, 256, 1, padding = 0), nn.BatchNorm2d(256), nn.ReLU(),  
+                                        nn.Conv2d(256, 512, 1, padding = 0), nn.BatchNorm2d(512), nn.ReLU())
+                           
+        self.enc_conv_1024 = nn.Sequential(nn.Conv2d(512, 1024, 1, padding = 0), nn.BatchNorm2d(1024), nn.ReLU())
         block_cfg_0 = self.layer_setting[0][0]
         block_cfg_last = self.layer_setting[-1][0]
         self.in_channels = make_divisible(block_cfg_0[1], 8)
@@ -403,14 +407,14 @@ class EfficientNet(BaseModule):
             if i in self.out_indices:
                 
                 if x.size(2)== 38:
-                    self.enc_conv_512 = nn.Sequential(nn.Conv2d(48, 256, 1, padding = 0), nn.BatchNorm2d(256), nn.ReLU(),  
-                                        nn.Conv2d(256, 512, 1, padding = 0), nn.BatchNorm2d(512), nn.ReLU())
+
                     x = self.enc_conv_512(x)
                     outs.append(x)
-                    # [print(el.size(), end = '') for el in outs]
-                    self.enc_conv_1024 = nn.Sequential(nn.Conv2d(512, 1024, 1, padding = 0), nn.BatchNorm2d(1024), nn.ReLU())
+
                     x = self.enc_conv_1024(x)
+                   
                     outs.append(x)
+                    [print(el.shape()) for el in outs]                    
                     return tuple(outs)
             # else:
             #     outs.append(x)
