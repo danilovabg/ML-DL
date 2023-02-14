@@ -38,7 +38,7 @@ https://huggingface.co/spaces/danilovabg/detection_project
 ### Я решила выбрать именно детекцию йога поз, так как по моему мнению это может иметь реальное применение в жизни. Люди интересующиеся йогой (особенно начинающие) не всегда помнят названия поз или вообще их не знают, приложение поможет оределить название позы, чтобы после можно было найти информацию об это позе (техника выполнения, показания и противопоказания) Гугл поиск по картинке не выдает релвантных результатов
 ![Гугл поиск по картинке (гугл камера)](https://github.com/danilovabg/ML-DL/blob/master/%D0%B3%D1%83%D0%B3_%D0%BF%D0%BE%D0%B8%D1%81_%D0%BF%D0%BE_%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B52.png)
 ![Гугл поиск по картинке](https://github.com/danilovabg/ML-DL/blob/master/%D0%B3%D1%83%D0%B3%D0%BB_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B5.png)
-![Моё приложение](https://github.com/danilovabg/ML-DL/blob/master/%D0%BC%D0%BE%D0%B5_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.png)
+![Моё приложение](https://github.com/danilovabg/ML-DL/blob/master/%D0%BC%D0%BE%D0%B5_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_.png)
 
 
 ## ssd_model_with_changed_backbone
